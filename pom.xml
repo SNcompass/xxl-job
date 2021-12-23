@@ -31,7 +31,7 @@
 		<spring-boot.version>2.4.5</spring-boot.version>
 
 		<mybatis-spring-boot-starter.version>2.1.4</mybatis-spring-boot-starter.version>
-		<mysql-connector-java.version>8.0.24</mysql-connector-java.version>
+<!--		<mysql-connector-java.version>8.0.24</mysql-connector-java.version>-->
 
 		<slf4j-api.version>1.7.30</slf4j-api.version>
 		<junit-jupiter.version>5.7.1</junit-jupiter.version>
@@ -50,6 +50,19 @@
 		</plugins>
 	</build>
 
+	<dependencies>
+		<dependency>
+			<groupId>cn.easyproject</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>12.1.0.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.2.8</version>
+		</dependency>
+	</dependencies>
 
 	<licenses>
 		<license>

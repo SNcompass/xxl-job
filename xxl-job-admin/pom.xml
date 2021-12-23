@@ -59,11 +59,23 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>${mybatis-spring-boot-starter.version}</version>
 		</dependency>
-		<!-- mysql -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql-connector-java.version}</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		<!-- mysql -->
+<!--		<dependency>-->
+<!--			<groupId>mysql</groupId>-->
+<!--			<artifactId>mysql-connector-java</artifactId>-->
+<!--			<version>${mysql-connector-java.version}</version>-->
+<!--		</dependency>-->
+
+		<!-- oracle -->
+		<dependency>
+			<groupId>cn.easyproject</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>12.1.0.2.0</version>
 		</dependency>
 
 		<!-- xxl-job-core -->
