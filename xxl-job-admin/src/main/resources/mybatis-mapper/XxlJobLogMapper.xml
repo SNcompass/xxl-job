@@ -125,28 +125,25 @@
 			trigger_code,
 			handle_code
 		) VALUES (
-			seq_xxl_job_log.nextval
+			seq_xxl_job_log.nextval,
 			#{jobGroup},
 			#{jobId},
 			#{triggerTime},
 			#{triggerCode},
 			#{handleCode}
-		);
-		<!--<selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
-			SELECT LAST_INSERT_ID() 
-		</selectKey>-->
+		)
 	</insert>
 
 	<update id="updateTriggerInfo" >
 		UPDATE xxl_job_log
 		SET
-			trigger_time= #{triggerTime},
+			trigger_time= #{triggerTime,jdbcType=DATE},
 			trigger_code= #{triggerCode},
-			trigger_msg= #{triggerMsg},
-			executor_address= #{executorAddress},
-			executor_handler=#{executorHandler},
-			executor_param= #{executorParam},
-			executor_sharding_param= #{executorShardingParam},
+			trigger_msg= #{triggerMsg,jdbcType=CLOB},
+			executor_address= #{executorAddress,jdbcType=VARCHAR},
+			executor_handler=#{executorHandler,jdbcType=VARCHAR},
+			executor_param= #{executorParam,jdbcType=VARCHAR},
+			executor_sharding_param= #{executorShardingParam,jdbcType=VARCHAR},
 			executor_fail_retry_count= #{executorFailRetryCount}
 		WHERE id= #{id}
 	</update>
